@@ -35,15 +35,8 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-  font-size: 2.4rem;
-  color: #b74b4b;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.logo:hover {
-  color: #ff7777;
+nav {
+  margin-left: auto;
 }
 
 nav a {
@@ -51,7 +44,7 @@ nav a {
   color: #fff;
   margin-left: 2rem;
   transition: color 0.3s;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 nav a:hover,
@@ -59,9 +52,41 @@ nav a.active {
   color: #b74b4b;
 }
 
+/* Gaya dasar untuk menu-toggle */
+.menu-toggle {
+  display: none;
+  font-size: 2.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Tampilan mobile */
 @media (max-width: 768px) {
   nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #111;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  /* Tampilkan menu-toggle di layar kecil */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Tampilkan nav ketika aktif */
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.8rem;
   }
 }
 
