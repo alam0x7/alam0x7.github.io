@@ -40,6 +40,7 @@ header {
   color: #b74b4b;
   font-weight: bold;
   transition: color 0.3s;
+  visibility: hidden;
 }
 
 .logo:hover {
