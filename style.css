@@ -1,194 +1,128 @@
-/* ===== RESET ===== */
+/* Pengaturan Dasar */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
-  overflow-x: hidden;
+    background-color: #080808; /* Sesuaikan dengan tema gelapmu */
+    color: white;
 }
 
-/* ===== HEADER ===== */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1.5rem 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #222;
-  z-index: 1000;
-}
-
-.hero {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-size: 2.4rem;
-  color: #b74b4b;
-  font-weight: bold;
-}
-
-nav a {
-  font-size: 1.6rem;
-  color: #fff;
-  margin-left: 2rem;
-  text-decoration: none;
-}
-
-nav a.active,
-nav a:hover {
-  color: #b74b4b;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-/* ===== HERO ===== */
+/* Layout Hero */
 .home {
-  padding-top: 10rem;
-  padding-bottom: 4rem;
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-}
-
-.home-img {
-  width: 300px;
-  border-radius: 50%;
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 5rem;
+    padding: 0 10%;
 }
 
 .home-img img {
-  width: 100%;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #00eeff; /* Warna neon crypto */
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Default ke kiri di desktop */
+    justify-content: center;
 }
 
 .home-content h1 {
-  font-size: 4.8rem;
+    font-size: 3.5rem;
+    font-weight: 700;
 }
 
 .home-content span {
-  color: #b74b4b;
-}
-
-.home-content h3 {
-  font-size: 2.4rem;
-  margin: 1rem 0;
+    color: #00eeff;
 }
 
 .home-content p {
-  font-size: 1.6rem;
-  max-width: 500px;
-  line-height: 1.6;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    line-height: 1.6;
 }
 
-/* ===== SOCIAL ===== */
 .social-icons a {
-  display: inline-flex;
-  width: 4rem;
-  height: 4rem;
-  border: 2px solid #b74b4b;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  color: #b74b4b;
-  margin: 0.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00eeff;
+    border-radius: 50%;
+    color: #00eeff;
+    margin: 0 10px 20px 0;
+    transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-  background: #b74b4b;
-  color: #111;
+    background: #00eeff;
+    color: black;
 }
 
 .btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  border: 2px solid #b74b4b;
-  border-radius: 30px;
-  color: #b74b4b;
+    display: inline-block;
+    padding: 10px 28px;
+    background: #00eeff;
+    border-radius: 40px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
 }
 
-/* ===== STATS ===== */
-.stats {
-  max-width: 1000px;
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
+/* ================= STATS SECTION (MODIFIED) ================= */
+.stats-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .stat-box {
-  background: #111;
-  border-radius: 14px;
-  padding: 2rem 1.5rem;
-  width: 220px;
-  max-width: 100%;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(255, 80, 80, 0.2);
+    flex: 1;
+    min-width: 120px;
 }
 
 .stat-box h2 {
-  font-size: 2.6rem;
-  color: #ff5a5a;
+    font-size: 2rem;
+    color: #00eeff;
 }
 
 .stat-box p {
-  font-size: 1.2rem;
-  color: #ccc;
-  line-height: 1.4;
-  font-weight: bold;
+    font-size: 0.9rem;
+    margin: 5px 0 0 0; /* Override margin p global */
 }
 
-.stat-box h2 {
-  color: #00ff85;
-  text-shadow:
-    0 0 6px rgba(0, 255, 133, 0.8),
-    0 0 12px rgba(0, 255, 133, 0.6),
-    0 0 20px rgba(0, 255, 133, 0.4);
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
+/* Responsif untuk Mobile */
+@media (max-width: 995px) {
     .home {
-    flex-direction: column;
-    text-align: center;
-  }
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem 5%;
+    }
 
-  .home-img {
-    margin: 0 auto;
-  }
-}
+    .home-img img {
+        width: 60vw;
+        margin-top: 3rem;
+    }
 
-.stat-box {
-    width: 100%;
-    max-width: 300px;
-  }
+    .home-content {
+        align-items: center; /* Di mobile stats jadi center */
+    }
 
-  .stats {
-    gap: 1.2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .home {
-    min-height: 100vh;
-    align-items: center;
-  }
-
-  .stats {
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .stats-container {
+        justify-content: center;
+    }
 }
