@@ -34,19 +34,22 @@ const menuToggle = document.getElementById("menu-toggle");
 
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count");
-  const speed = 200; // makin kecil = makin cepat
+  const speed = 150;
 
   counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    const suffix = counter.dataset.suffix || "";
+    let current = 0;
+
     const updateCount = () => {
-      const target = +counter.getAttribute("data-target");
-      const current = +counter.innerText;
       const increment = Math.ceil(target / speed);
+      current += increment;
 
       if (current < target) {
-        counter.innerText = current + increment;
-        setTimeout(updateCount, 20);
+        counter.innerText = current + suffix;
+        requestAnimationFrame(updateCount);
       } else {
-        counter.innerText = target;
+        counter.innerText = target + suffix;
       }
     };
 
