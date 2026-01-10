@@ -22,15 +22,8 @@ function type() {
     setTimeout(type, 100); // kecepatan mengetik per huruf
   }
 }
+
 type();
-
-const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count");
