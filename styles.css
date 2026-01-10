@@ -68,6 +68,34 @@ nav a.active {
   cursor: pointer;
 }
 
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: #111;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 80, 80, 0.15);
+}
+
+.stat-box h2 {
+  font-size: 2.5rem;
+  color: #ff5a5a;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
 /* Tampilan mobile */
 @media (max-width: 768px) {
   nav {
